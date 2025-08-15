@@ -6,7 +6,7 @@ services:
     ports:
       - "8080:80" # ganti port kalau 8080 sudah dipakai
     environment:
-      WORDPRESS_DB_HOST: mysql_db:3306
+      WORDPRESS_DB_HOST: mysql-container
       WORDPRESS_DB_USER: userku
       WORDPRESS_DB_PASSWORD: passku
       WORDPRESS_DB_NAME: dbku
