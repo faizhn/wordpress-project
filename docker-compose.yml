@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress_project
+    ports:
+      - "8080:80" # ganti port kalau 8080 sudah dipakai
+    environment:
+      WORDPRESS_DB_HOST: mysql_db:3306
+      WORDPRESS_DB_USER: userku
+      WORDPRESS_DB_PASSWORD: rahasia123
+      WORDPRESS_DB_NAME: dbku
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - default
+
+volumes:
+  wordpress_data:
